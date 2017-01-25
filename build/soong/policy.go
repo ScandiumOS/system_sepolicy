@@ -509,6 +509,11 @@ func (c *policyBinary) GenerateAndroidBuildActions(ctx android.ModuleContext) {
 			Output(permissiveDomains)
 		rule.Temporary(permissiveDomains)
 
+		rule.Command().Text("sed -i '/recovery/d' >").
+			Input(permissiveDomains).
+                        Output(permissiveDomains)
+                rule.Temporary(permissiveDomains)
+
 		msg := `==========\n` +
 			`ERROR: permissive domains not allowed in user builds\n` +
 			`List of invalid domains:`
