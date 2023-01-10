@@ -18,9 +18,12 @@ attribute fs_type;
 # All types used for context= mounts.
 attribute contextmount_type;
 
+<<<<<<< HEAD
 # All types used for sdcard_posix context= mounts.
 attribute sdcard_posix_contextmount_type;
 
+=======
+>>>>>>> repo/thirteen
 # All types used for files that can exist on a labeled fs.
 # Do not use for pseudo file types.
 # On change, update CHECK_FC_ASSERT_ATTRS
@@ -94,6 +97,7 @@ attribute extended_core_property_type;
 
 # All properties defined by /system.
 attribute system_property_type;
+<<<<<<< HEAD
 
 # All /system-defined properties used only in /system.
 attribute system_internal_property_type;
@@ -103,6 +107,21 @@ attribute system_restricted_property_type;
 
 # All /system-defined properties with no restrictions.
 attribute system_public_property_type;
+=======
+expandattribute system_property_type false;
+
+# All /system-defined properties used only in /system.
+attribute system_internal_property_type;
+expandattribute system_internal_property_type false;
+
+# All /system-defined properties which can't be written outside /system.
+attribute system_restricted_property_type;
+expandattribute system_restricted_property_type false;
+
+# All /system-defined properties with no restrictions.
+attribute system_public_property_type;
+expandattribute system_public_property_type false;
+>>>>>>> repo/thirteen
 
 # All properties defined by /product.
 # Currently there are no enforcements between /system and /product, so for now
@@ -114,6 +133,7 @@ define(`product_public_type',     `system_public_property_type')
 
 # All properties defined by /vendor.
 attribute vendor_property_type;
+<<<<<<< HEAD
 
 # All /vendor-defined properties used only in /vendor.
 attribute vendor_internal_property_type;
@@ -123,6 +143,21 @@ attribute vendor_restricted_property_type;
 
 # All /vendor-defined properties with no restrictions.
 attribute vendor_public_property_type;
+=======
+expandattribute vendor_property_type false;
+
+# All /vendor-defined properties used only in /vendor.
+attribute vendor_internal_property_type;
+expandattribute vendor_internal_property_type false;
+
+# All /vendor-defined properties which can't be written outside /vendor.
+attribute vendor_restricted_property_type;
+expandattribute vendor_restricted_property_type false;
+
+# All /vendor-defined properties with no restrictions.
+attribute vendor_public_property_type;
+expandattribute vendor_public_property_type false;
+>>>>>>> repo/thirteen
 
 # All service_manager types created by system_server
 attribute system_server_service;

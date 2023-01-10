@@ -396,10 +396,18 @@ neverallow {
 
 # Allow the shell to set MTE props, so that non-root users with adb shell
 # access can control the settings on their device.
+<<<<<<< HEAD
+=======
+# Allow system apps to set MTE props, so Developer Options can set them.
+>>>>>>> repo/thirteen
 neverallow {
   domain
   -init
   -shell
+<<<<<<< HEAD
+=======
+  -system_app
+>>>>>>> repo/thirteen
 } {
   arm64_memtag_prop
 }:property_service set;

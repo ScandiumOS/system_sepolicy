@@ -218,6 +218,12 @@ ro.lowpan.              u:object_r:lowpan_prop:s0
 # heapprofd properties
 heapprofd.              u:object_r:heapprofd_prop:s0
 
+<<<<<<< HEAD
+=======
+# traced properties
+traced.oome_heap_session.count u:object_r:traced_oome_heap_session_count_prop:s0 exact uint
+
+>>>>>>> repo/thirteen
 # hwservicemanager properties
 hwservicemanager.       u:object_r:hwservicemanager_prop:s0
 
@@ -347,9 +353,26 @@ audio.deep_buffer.media         u:object_r:audio_config_prop:s0 exact bool
 audio.offload.video             u:object_r:audio_config_prop:s0 exact bool
 audio.offload.min.duration.secs u:object_r:audio_config_prop:s0 exact int
 
+<<<<<<< HEAD
 ro.audio.ignore_effects   u:object_r:audio_config_prop:s0 exact bool
 ro.audio.monitorRotation  u:object_r:audio_config_prop:s0 exact bool
 ro.audio.offload_wakelock u:object_r:audio_config_prop:s0 exact bool
+=======
+# spatializer tuning
+audio.spatializer.priority               u:object_r:audio_config_prop:s0 exact int
+audio.spatializer.effect.affinity        u:object_r:audio_config_prop:s0 exact int
+audio.spatializer.effect.util_clamp_min  u:object_r:audio_config_prop:s0 exact int
+audio.spatializer.pose_predictor_type    u:object_r:audio_config_prop:s0 exact enum 0 1 2 3
+audio.spatializer.prediction_duration_ms u:object_r:audio_config_prop:s0 exact int
+
+ro.audio.ignore_effects   u:object_r:audio_config_prop:s0 exact bool
+ro.audio.monitorRotation  u:object_r:audio_config_prop:s0 exact bool
+ro.audio.offload_wakelock u:object_r:audio_config_prop:s0 exact bool
+
+# Configure whether new device has spatialization default enabled.
+ro.audio.spatializer_binaural_enabled_default u:object_r:audio_config_prop:s0 exact bool
+ro.audio.spatializer_transaural_enabled_default u:object_r:audio_config_prop:s0 exact bool
+>>>>>>> repo/thirteen
 # Boolean property used in AudioService to configure whether
 # spatializer functionality should be initialized
 ro.audio.spatializer_enabled u:object_r:audio_config_prop:s0 exact bool
@@ -361,6 +384,10 @@ config.disable_cameraservice u:object_r:camera_config_prop:s0 exact bool
 camera.disable_preview_scheduler u:object_r:camera_config_prop:s0 exact bool
 camera.disable_zsl_mode       u:object_r:camera_config_prop:s0 exact bool
 camera.fifo.disable           u:object_r:camera_config_prop:s0 exact bool
+<<<<<<< HEAD
+=======
+camera.enable_landscape_to_portrait u:object_r:camera_config_prop:s0 exact bool
+>>>>>>> repo/thirteen
 ro.camera.notify_nfc          u:object_r:camera_config_prop:s0 exact bool
 ro.camera.enableLazyHal       u:object_r:camera_config_prop:s0 exact bool
 ro.camera.enableCamera1MaxZsl u:object_r:camera_config_prop:s0 exact bool
@@ -478,6 +505,16 @@ persist.bluetooth.btsnoopdefaultmode           u:object_r:bluetooth_prop:s0 exac
 persist.bluetooth.btsnooplogmode               u:object_r:bluetooth_prop:s0 exact enum empty disabled filtered full
 persist.bluetooth.factoryreset                 u:object_r:bluetooth_prop:s0 exact bool
 
+<<<<<<< HEAD
+=======
+bluetooth.a2dp.source.sbc_priority.config            u:object_r:bluetooth_config_prop:s0 exact int
+bluetooth.a2dp.source.aac_priority.config            u:object_r:bluetooth_config_prop:s0 exact int
+bluetooth.a2dp.source.aptx_priority.config           u:object_r:bluetooth_config_prop:s0 exact int
+bluetooth.a2dp.source.aptx_hd_priority.config        u:object_r:bluetooth_config_prop:s0 exact int
+bluetooth.a2dp.source.ldac_priority.config           u:object_r:bluetooth_config_prop:s0 exact int
+bluetooth.a2dp.source.lc3_priority.config            u:object_r:bluetooth_config_prop:s0 exact int
+
+>>>>>>> repo/thirteen
 bluetooth.hardware.power.operating_voltage_mv        u:object_r:bluetooth_config_prop:s0 exact int
 bluetooth.hardware.power.idle_cur_ma                 u:object_r:bluetooth_config_prop:s0 exact int
 bluetooth.hardware.power.tx_cur_ma                   u:object_r:bluetooth_config_prop:s0 exact int
@@ -491,6 +528,11 @@ bluetooth.core.gap.le.privacy.enabled                u:object_r:bluetooth_config
 bluetooth.device.default_name                        u:object_r:bluetooth_config_prop:s0 exact string
 bluetooth.device.class_of_device                     u:object_r:bluetooth_config_prop:s0 exact string
 
+<<<<<<< HEAD
+=======
+bluetooth.le.disable_apcf_extended_features          u:object_r:bluetooth_config_prop:s0 exact bool
+
+>>>>>>> repo/thirteen
 bluetooth.profile.a2dp.sink.enabled                  u:object_r:bluetooth_config_prop:s0 exact bool
 bluetooth.profile.a2dp.source.enabled                u:object_r:bluetooth_config_prop:s0 exact bool
 bluetooth.profile.asha.central.enabled               u:object_r:bluetooth_config_prop:s0 exact bool
@@ -520,6 +562,11 @@ bluetooth.profile.pbap.server.enabled                u:object_r:bluetooth_config
 bluetooth.profile.sap.server.enabled                 u:object_r:bluetooth_config_prop:s0 exact bool
 bluetooth.profile.vcp.controller.enabled             u:object_r:bluetooth_config_prop:s0 exact bool
 
+<<<<<<< HEAD
+=======
+bluetooth.sco.disable_enhanced_connection            u:object_r:bluetooth_config_prop:s0 exact bool
+
+>>>>>>> repo/thirteen
 persist.nfc.debug_enabled                      u:object_r:nfc_prop:s0 exact bool
 
 persist.radio.multisim.config u:object_r:radio_control_prop:s0 exact string
@@ -1341,3 +1388,9 @@ ro.gms.dck.eligible_wcc u:object_r:dck_prop:s0 exact int
 
 # virtualization service properties
 virtualizationservice.state.last_cid u:object_r:virtualizationservice_prop:s0 exact uint
+<<<<<<< HEAD
+=======
+
+# Adaptive haptics settings property
+vibrator.adaptive_haptics.enabled u:object_r:adaptive_haptics_prop:s0 exact string
+>>>>>>> repo/thirteen

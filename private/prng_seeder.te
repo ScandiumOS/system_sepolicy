@@ -4,10 +4,20 @@
 # internal DRBGs it will connect to /dev/socket/prng_seeder and the daemon will write a
 # fixed size block of entropy then disconnect.  No other IO is performed.
 typeattribute prng_seeder coredomain;
+<<<<<<< HEAD
 # mlstrustedsubject required in order to allow connections from trusted app domains.
 typeattribute prng_seeder mlstrustedsubject;
 type prng_seeder_exec, system_file_type, exec_type, file_type;
 init_daemon_domain(prng_seeder)
+=======
+
+# mlstrustedsubject required in order to allow connections from trusted app domains.
+typeattribute prng_seeder mlstrustedsubject;
+
+type prng_seeder_exec, system_file_type, exec_type, file_type;
+init_daemon_domain(prng_seeder)
+
+>>>>>>> repo/thirteen
 # Socket open and listen are performed by init.
 allow prng_seeder prng_seeder:unix_stream_socket { read write getattr accept };
 allow prng_seeder hw_random_device:chr_file { read open };

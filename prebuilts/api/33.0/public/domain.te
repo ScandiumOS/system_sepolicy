@@ -386,6 +386,10 @@ neverallow {
   -init
   -ueventd
   -vold
+<<<<<<< HEAD
+=======
+  -recovery
+>>>>>>> repo/thirteen
 } self:global_capability_class_set mknod;
 
 # No process can map low memory (< CONFIG_LSM_MMAP_MIN_ADDR).

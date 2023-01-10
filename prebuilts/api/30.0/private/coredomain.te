@@ -11,7 +11,10 @@ neverallow {
     # generic access to sysfs_type
     -ueventd
     -vold
+<<<<<<< HEAD
     -system_app
+=======
+>>>>>>> repo/thirteen
 } sysfs_leds:file *;
 ')
 

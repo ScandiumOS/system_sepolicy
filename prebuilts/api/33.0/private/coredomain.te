@@ -40,7 +40,10 @@ neverallow {
     -apexd
     -ueventd
     -vold
+<<<<<<< HEAD
     -system_app
+=======
+>>>>>>> repo/thirteen
 } sysfs_leds:file *;
 ')
 
