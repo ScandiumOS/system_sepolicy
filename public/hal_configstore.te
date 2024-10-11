@@ -29,6 +29,7 @@ neverallow hal_configstore_server domain:{
 } *;
 neverallow hal_configstore_server {
   domain
+  -prng_seeder
   -hal_configstore_server
   -logd
   userdebug_or_eng(`-su')
