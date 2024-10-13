@@ -80,17 +80,15 @@ mixed_sepolicy_build :=
 endif
 
 NEVERALLOW_ARG :=
+
 ifeq ($(SELINUX_IGNORE_NEVERALLOWS),true)
-<<<<<<< HEAD
-=======
-ifeq ($(TARGET_BUILD_VARIANT),user)
-$(error SELINUX_IGNORE_NEVERALLOWS := true cannot be used in user builds)
-endif
->>>>>>> repo/thirteen
-$(warning Be careful when using the SELINUX_IGNORE_NEVERALLOWS flag. \
-          It does not work in user builds and using it will \
-          not stop you from failing CTS.)
-NEVERALLOW_ARG := -N
+  ifeq ($(TARGET_BUILD_VARIANT),user)
+    $(error SELINUX_IGNORE_NEVERALLOWS := true cannot be used in user builds)
+  endif
+  $(warning Be careful when using the SELINUX_IGNORE_NEVERALLOWS flag. \
+            It does not work in user builds and using it will \
+            not stop you from failing CTS.)
+  NEVERALLOW_ARG := -N
 endif
 
 # BOARD_SEPOLICY_DIRS was used for vendor/odm sepolicy customization before.
@@ -358,15 +356,10 @@ endif  # SELINUX_IGNORE_NEVERALLOWS
 endif  # with_asan
 
 ifneq ($(PLATFORM_SEPOLICY_VERSION),$(TOT_SEPOLICY_VERSION))
-<<<<<<< HEAD
-LOCAL_REQUIRED_MODULES += \
-    sepolicy_freeze_test
-=======
 ifeq ($(PLATFORM_SEPOLICY_VERSION_TEST),true)
 LOCAL_REQUIRED_MODULES += \
     sepolicy_freeze_test
 endif # ($(PLATFORM_SEPOLICY_VERSION_TEST),true)
->>>>>>> repo/thirteen
 endif # ($(PLATFORM_SEPOLICY_VERSION),$(TOT_SEPOLICY_VERSION))
 
 include $(BUILD_PHONY_PACKAGE)

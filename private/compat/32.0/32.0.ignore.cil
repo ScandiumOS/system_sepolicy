@@ -5,10 +5,7 @@
 (typeattribute new_objects)
 (typeattributeset new_objects
   ( new_objects
-<<<<<<< HEAD
-=======
     adaptive_haptics_prop
->>>>>>> repo/thirteen
     adservices_manager_service
     apexd_select_prop
     artd_service
@@ -78,10 +75,7 @@
     sysfs_lru_gen_enabled
     system_dlkm_file
     tare_service
-<<<<<<< HEAD
-=======
     traced_oome_heap_session_count_prop
->>>>>>> repo/thirteen
     tv_iapp_service
     untrusted_app_30
     vendor_uuid_mapping_config_file

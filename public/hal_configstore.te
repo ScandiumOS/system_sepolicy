@@ -29,15 +29,9 @@ neverallow hal_configstore_server domain:{
 } *;
 neverallow hal_configstore_server {
   domain
-<<<<<<< HEAD
   -prng_seeder
   -hal_configstore_server
   -logd
-=======
-  -hal_configstore_server
-  -logd
-  -prng_seeder
->>>>>>> repo/thirteen
   userdebug_or_eng(`-su')
   -tombstoned
   userdebug_or_eng(`-heapprofd')
